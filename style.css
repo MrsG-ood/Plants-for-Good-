@@ -7,4 +7,81 @@
 /*============================================
         BASE STYLES
 =============================================*/
+*{box-sizing: border-box;}
+body,
+html{
+    margin:0;
+    padding:0;
+}
+h1{
+    font-family: 'Sue Ellen Francisco', cursive;
+}
 
+
+
+/*============================================
+        MEDIA QUERIES
+=============================================*/
+/*--------------------Screens smaller than 776px -------*/
+@media screens and (max-width:776px){
+    .tinyGrid{  /*grid for layout*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo logo"
+        "banner banner"
+        "buyMe buyMe"
+        "saveME saveMe"
+        "forEvery forEvery"
+        "plant deal"
+        "buyNow buyNow"
+        "plant2 gift"
+        "tbn1 tbn2"
+        "tbn3 tbn4"
+        "pet pet"
+        "other link";
+    }
+
+    .tinyLogo{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr .5fr .5fr;
+        grid-template-areas: 
+        "p p"
+        "f g"
+        "l g";
+    }
+    
+
+}
+
+
+/*--------------------Screens LANDSCAPE TABLETS + LARGESCREENS -------*/
+@media screens and (min-width: 777px){
+
+    .largeGrid{
+        display: grid;
+        grid-template-columns: .25fr 1fr 1fr 1fr 1fr .25fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "... ... logo logo ... ..."
+        "banner banner banner banner banner banner"
+        "... buyMe buyMe saveMe saveMe ..."
+        "... ... forEvery forEvery ... ..."
+        "... plant deal plant2 gift ..."
+        "... buyNow ... ... buyNow ..."
+        "tbn1 tbn2 tbn3 tbn4"
+        "... ... pet pet ... ..."
+        "... other other link link ...";
+    }
+    .largeLogo{
+        display: flex;
+        flex-direction: row nowrap;
+        justify-content: center;
+    }
+
+}
+
+
+/*--------------GRID-AREA-ASSIGNMENTS----------*/
