@@ -12,76 +12,175 @@ body,
 html{
     margin:0;
     padding:0;
+    background-image:linear-gradient(to bottom, #e8e2d9 40%, #bad2cd 80%, #85aba2 100%);
+    text-align: center;
+    color: #42403d;
 }
 h1{
     font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    margin:0;
+    padding-top:2rem;
+    padding-bottom: 1rem;
+}
+h2{
+    font-family: 'Monsterrant', sans-serif;
+}
+h3{
+    font-family:'Monsterrant', sans-serif;
+    color: #4a625f;
+    margin:0;
+    padding-top:1rem;
+    padding-left:1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+img{
+    width: 40vw;
+    padding: .25rem;
+    border-radius: 5px;
 }
 
+p{
+    font-family:'Monsterrant', sans-serif;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin:0;
+    font-size: 1rem;
+    letter-spacing: .10rem;
+    line-height: 1.5rem;
+}
+.removepad{
+    padding:0;
+}
+.addmargin{
+    margin-bottom: 1rem;
+}
 
+.imgfit {
+    object-fit: cover;
+    width:40vw;
+    justify-self: center;
+}
+.pl{
+    background-color: #85aba2;;
+    color:#4a625f;
+    padding-top:1rem;
+}
+.l{
+    background-color:#85aba2;
+    width:4rem;
+    height: 1rem;
+}
 
-/*============================================
-        MEDIA QUERIES
-=============================================*/
-/*--------------------Screens smaller than 776px -------*/
-@media screens and (max-width:776px){
-    .tinyGrid{  /*grid for layout*/
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "logo logo"
-        "banner banner"
-        "buyMe buyMe"
-        "saveME saveMe"
-        "forEvery forEvery"
-        "plant deal"
-        "buyNow buyNow"
-        "plant2 gift"
-        "tbn1 tbn2"
-        "tbn3 tbn4"
-        "pet pet"
-        "other link";
-    }
-
-    .tinyLogo{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr .5fr .5fr;
-        grid-template-areas: 
-        "p p"
-        "f g"
-        "l g";
-    }
+.banner{
+    background-color:#4a625f;
+    color:#e6eaea;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom:1rem;
+    margin:0;
+    font-family: 'Monsterrant', sans-serif;
+    text-transform:uppercase;
+}
+.gift{
+    background-color: #bad2cd;
+    padding-top: 1rem;
+    border-radius: 3px;
+    width: 100vw;
+}
+.f{
+    font-size: 1.75rem;
+}
+.card{
+    border: 3px solid #4a625f;
+    border-radius: 3px;
+    background-color: #4a625f;
     
+}
+.card h3 {
+    color:#e8e2d9;
+}
+.pet{
+    width: 60vw;
+    margin-bottom:1rem;
+}
+.bottom{
+    margin-bottom: 2rem;
+}
+.top{
+    margin-top:1rem;
+}
+
+button{
+    background-color: #e6eaea;
+    border:none;
+    width:50vw;
+    height:2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px#42403d;
+    font-family: 'Monsterrant', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #42403d;
+    justify-self: center;
+}
+
+button:hover{
 
 }
 
+/*===============================================
+        MEDIA QUERIES
+================================================*/
+.flexme{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+.savegrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "buyMe saveMe"
+    "btn btn";
+    column-gap: 1rem;
+}
+.twox2grid{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "tbnT tbnT"
+    "tbn1 tbn2"
+    "tbn3 tbn4";
+    column-gap: 1rem;
+}
+.tbnT{grid-area:tbnT;}
+.tbn1{grid-area:tbn1;}
+.tbn2{grid-area:tbn2;}
+.tbn3{grid-area:tbn3;}
+.tbn4{grid-area:tbn4;}
+.btn{grid-area: btn;}
+.svw{
+    width: 40vw;
+}
 
-/*--------------------Screens LANDSCAPE TABLETS + LARGESCREENS -------*/
-@media screens and (min-width: 777px){
-
-    .largeGrid{
-        display: grid;
-        grid-template-columns: .25fr 1fr 1fr 1fr 1fr .25fr ;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "... ... logo logo ... ..."
-        "banner banner banner banner banner banner"
-        "... buyMe buyMe saveMe saveMe ..."
-        "... ... forEvery forEvery ... ..."
-        "... plant deal plant2 gift ..."
-        "... buyNow ... ... buyNow ..."
-        "tbn1 tbn2 tbn3 tbn4"
-        "... ... pet pet ... ..."
-        "... other other link link ...";
-    }
-    .largeLogo{
-        display: flex;
-        flex-direction: row nowrap;
-        justify-content: center;
-    }
-
+.buyMe{
+    grid-area: buyMe;
+}
+.buyme img{
+    align-self: flex-end;
+}
+.saveMe{
+    grid-area:saveMe;
+    color:#e8e2d9;
 }
 
 
-/*--------------GRID-AREA-ASSIGNMENTS----------*/
