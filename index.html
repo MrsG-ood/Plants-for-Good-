@@ -16,47 +16,64 @@
 <div class="flexme">
             <h2 class="tickerText"> ### PETS SAVED!</h2>
         
-        <div class="savegrid">
+        <div class="savegrid ">
             <span class="buyMe card">
-                <h3 >Buy Me</h3>
+                <h3 >Buy</h3>
                 <img class="imgfit" src="images/monstera_rotate.jpg" alt="Beautiful green monstera plant with a pattern of fisures delicately sprinkled along it's big leaves.">
             </span>
             <span class="saveMe card">
-                <h3 >Save Me</h3>
+                <h3 >Save</h3>
                 <img class="imgfit" src="images/hanging_puppy.jpg">
             </span>
         </div>
 
         <h3 class="fEtitle">Buy a plant, Save a Pet!</h3>
         <p class="forEvery">For every 4 plants sold, 1 pet will be sponsored for adoption! All vaccinations and spay/nutir and an adoption kit will be covered for every 4 plants sold! WOW! We all know plants are great for the environment, but you could literally save the life of an unloved pet just from buying a plant! </p>
-        
-        <section class="savegrid card addmargin">
-            <img class="buyMe imgfit" src="images/griffin-wooldridge-GCRnCci4BT0-unsplash.jpg"> 
-           <span class="saveMe removepad"> <h3><s>$70.00</s><br>Buy now for: <br>$42.99</h3> 
-                <p>The regular price for a Monstera at this size is $70. During our adoption event the price has been reduced to $42.99</p>
-            </span>
-            <button class="btn buyNow top bottom">Buy Now</button>
+<!-- hide smallscreen class when in large screens -->
+        <div class="smallscreen"> 
+            <section class="card addmargin">
+                <img class="buyMe imgfit bigger" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg"> 
+           
+                <h3 class="removepad right"><s>$70.00</s><br>Buy now for: <br>$42.99</h3> 
+                    <p class="removepad right light">The regular price for a Monstera at this size is $70. During our adoption event the price has been reduced to $42.99</p>
+               
+                <button class="btn buyNow top bottom">Buy Now</button>
          </section>
-
-        <span class="gift">
-             <h3 class="gift">Buy one for you and a friend:<br>$75.00</h3>
-             <p>Get 2 plants for $75 for a savings of $11. These 2 plants will get us half way to supporting the sponsership of one animal adoption!</p>
-             <button class="buyNow bottom top">Buy Now</button>
-         </span>
-
+        <section class="gift">
+             <h3 class="giftc">Buy one for you and a friend:<br>$75.00</h3>
+             <p class="giftc">Get 2 plants for $75 for a savings of $11. These 2 plants will get us half way to supporting the sponsership of one animal adoption!</p>
+             <button class="buyNow bottom top contrast">Buy Now</button>
+         </section>
+        </div>
+<!--display only for large screens, hide in small screens  -->
+        <div class="buygrid">
+                <img class="plantimg imgfit" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg">
+               <span class="bkgrd">
+                <h3 class="price cream"><s>$70.00</s><br>Buy now for <br>$42.99</h3>
+                <p class="priced cream">The regular price for a Monstera at this size is $70. During our adoption event the price has been reduced to $42.99</p>
+                <button class="priceb">Buy Now</button>
+            </span>
+            <span class="bkgrd">
+                <h3 class="dealg cream">Buy one for you & <br>a friend:<br> $75.00</h3>
+                <p class="dealgd cream">Get 2 plants for $75 for a savings of $11. These 2 plants will get us half way to supporting the sponsership of one animal adoption!</p>
+                <button class="dealgb">Buy Now</button>
+            </span>
+        </div>
+        <div class="infogrid frame">
         <h3 class="about">About the Plant</h3>
         <p class="aboutp">Monsteras are suprisingly easy to care for. They produce large leaves with evenly spaced fisures (rips) along the main vain of the leaf. They grow very large in the right climates. These plants need indirect light and humidity. If you live in a dry climate mist the leaves daily with water or a small humidifier beside the plant will suffice. Allow the soil to dry completely between waterings.</pclass>
         <h3 class="ship">Shipping and Garuntee</h3>
         <p class="ing">Ground shipping is free! Rushed shipping is availble for an additional $23.00. All plants are shipped with roots exposed as some states do not allow plants to be shipped with dirt attached to the roots. This is perfectly fine! The plant will remain healthy througout transport. If the weather is cold, all plants will be shipped with a heat pack to protect the plants. This often leads to new shoots growing during transport. Some slight damaged may occur during shipping. This is normal and the plant will still be healthy and recover. If your plant seems to have more damamge than expected, reach out to us and we will help!</p>
+    </div>
         <!-- <section class="gift"> -->
-            <span class="twox2grid">
-            <h3 class="tbnT">4 of these</h3>
+            <span class="twox2grid twox1grid">
+            <h3 class="tbnT cream">4 of these</h3>
             <img class="svw tbn1" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg"> 
             <img class="svw tbn2" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg"> 
             <img class="svw tbn3" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg"> 
             <img class="svw tbn4" src="images/severin-candrian-E3axNqcXtmk-unsplash.jpg"> 
         </span>
-        <h3 > = </h3>
+        <h3 style="font-size:3rem;" > Pays for the sponsorship of one pet for adoption. </h3>
         <h3> 1 Saved Pet!</h3>
         <img class="pet" src="images/alexandru-rotariu-o_QTeyGVWjQ-unsplash.jpg">
     </section>

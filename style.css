@@ -1,8 +1,8 @@
-/*=======================================
-    Styling Notes 
-    --- font-family: 'Montserrat', sans-serif;
-    --- font-family: 'Sue Ellen Francisco', cursive;
-===========================================*/
+/*-------
+A fictitious business and marketing campaign for the purpose of practice and demonstrating design and development skills. 
+BY: Tamara Gontarek 
+GitHub- Mrs.G-ood
+------------------------------*/
 
 /*============================================
         BASE STYLES
@@ -15,6 +15,9 @@ html{
     background-image:linear-gradient(to bottom, #e8e2d9 40%, #bad2cd 80%, #85aba2 100%);
     text-align: center;
     color: #42403d;
+    max-width: 1500px;
+    margin: auto;
+    border: 10px solid #4a625f;
 }
 h1{
     font-family: 'Sue Ellen Francisco', cursive;
@@ -31,9 +34,7 @@ h3{
     font-family:'Monsterrant', sans-serif;
     color: #4a625f;
     margin:0;
-    padding-top:1rem;
-    padding-left:1rem;
-    padding-right: 1rem;
+    padding:1rem 1rem;
     font-size: 2rem;
 }
 img{
@@ -41,7 +42,6 @@ img{
     padding: .25rem;
     border-radius: 5px;
 }
-
 p{
     font-family:'Monsterrant', sans-serif;
     padding-right: 1rem;
@@ -57,10 +57,10 @@ p{
 .addmargin{
     margin-bottom: 1rem;
 }
-
 .imgfit {
     object-fit: cover;
     width:40vw;
+    max-width:500px;
     justify-self: center;
 }
 .pl{
@@ -73,7 +73,6 @@ p{
     width:4rem;
     height: 1rem;
 }
-
 .banner{
     background-color:#4a625f;
     color:#e6eaea;
@@ -84,7 +83,7 @@ p{
     font-family: 'Monsterrant', sans-serif;
     text-transform:uppercase;
 }
-.gift{
+.giftc{
     background-color: #bad2cd;
     padding-top: 1rem;
     border-radius: 3px;
@@ -97,13 +96,13 @@ p{
     border: 3px solid #4a625f;
     border-radius: 3px;
     background-color: #4a625f;
-    
 }
 .card h3 {
     color:#e8e2d9;
 }
 .pet{
     width: 60vw;
+    max-width:600px;
     margin-bottom:1rem;
 }
 .bottom{
@@ -112,7 +111,6 @@ p{
 .top{
     margin-top:1rem;
 }
-
 button{
     background-color: #e6eaea;
     border:none;
@@ -126,15 +124,15 @@ button{
     text-transform: uppercase;
     color: #42403d;
     justify-self: center;
+    letter-spacing: .5rem;
 }
-
+.contrast{
+    background-color: #42403d;
+    color:#e8e2d9;
+}
 button:hover{
-
+    background-color:goldenrod;
 }
-
-/*===============================================
-        MEDIA QUERIES
-================================================*/
 .flexme{
     display: flex;
     flex-flow: column nowrap;
@@ -143,44 +141,149 @@ button:hover{
     padding-left:1rem;
     padding-right:1rem;
 }
-.savegrid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "buyMe saveMe"
-    "btn btn";
-    column-gap: 1rem;
-}
-.twox2grid{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "tbnT tbnT"
-    "tbn1 tbn2"
-    "tbn3 tbn4";
-    column-gap: 1rem;
-}
+/*----------------GRID-ASSIGNMENT-AREA---------*/
 .tbnT{grid-area:tbnT;}
-.tbn1{grid-area:tbn1;}
-.tbn2{grid-area:tbn2;}
-.tbn3{grid-area:tbn3;}
-.tbn4{grid-area:tbn4;}
-.btn{grid-area: btn;}
-.svw{
-    width: 40vw;
+    .tbn1{grid-area:tbn1;}
+    .tbn2{grid-area:tbn2;}
+    .tbn3{grid-area:tbn3;}
+    .tbn4{grid-area:tbn4;}
+    .btn{grid-area: btn;}
+    .gift{grid-area:gift;}
+    .svw{
+        width: 40vw;
+    }
+    .bigger{
+        width: 60vw;
+        padding-top:1rem;
+    }
+    .buyMe{grid-area: buyMe;}
+    .buyMe img{
+        align-self: flex-end;
+    }
+    .right{grid-area:right;}
+    .saveMe{
+        grid-area:saveMe;
+        color:#e8e2d9;
+    }
+    .light{
+        color:#e8e2d9;
+    }
+    .savegrid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "buyMe saveMe"
+        "btn btn";
+        column-gap: 1rem;
+    }
+
+/*===============================================
+        MEDIA QUERIES
+================================================*/
+@media screen and (max-width: 776px){
+
+    .buygrid{display: none;}
+   
+    .twox2grid{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "tbnT tbnT"
+        "tbn1 tbn2"
+        "tbn3 tbn4";
+        column-gap: 1rem;
+    }
+    button{
+        height:44px;
+    }
 }
 
-.buyMe{
-    grid-area: buyMe;
+@media screen and (min-width: 777px){
+    
+    .smallscreen{display:none;}
+   
+    .buygrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "plantimg price"
+        "plantimg priced"
+        "plantimg priceb"
+        "plantimg dealg"
+        "plantimg dealgd"
+        "plantimg dealgb";
+        column-gap: 1rem;
+        row-gap: .25rem;
+        background-color: #4a625f;
+        border-radius: 5px;
+        border: 5px solid #4a625f;
+        max-width:1050px;
+    }
+    .buygrid button{
+        margin-top:.5rem;
+        margin-bottom: 1rem;
+    }
+    .plantimg{
+        width: 40vw;
+        max-width:500px;
+        padding-top:.25rem;
+    }
+    /*------- GRIDA AREA ASSINGNMENT FOR .BUYGRID CLASS-----*/
+    .plantimg{grid-area:plantimg;}
+    .price{grid-area:price;}
+    .priced{grid-area:priced;}
+    .priceb{grid-area:priceb;}
+    .dealg{grid-area:dealg;}
+    .dealgd{grid-area:dealgd;}
+    .dealgb{grid-area:dealgb;}
+   .about{grid-area: about;}
+   .ship{grid-area:ship;}
+   .aboutp{grid-area:aboutp;}
+   .ing{grid-area:ing;}
+ 
+    .twox1grid{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr;
+        grid-template-areas: 
+        "tbnT tbnT tbnT tbnT"
+        "tbn1 tbn2 tbn3 tbn4";
+        column-gap: 1rem;
+        background-color: #4a625f;
+        border:10px solid  #4a625f;
+        color:#e8e2d9;
+    }
+    .svw{
+        width: 20vw;
+        max-width:250px;
+    }
+    .gift{
+        width:25vw;
+    }
+    button{
+        width:20vw;
+    }
+    .infogrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:auto;
+        grid-template-areas: 
+        "about ship"
+        "aboutp ing"
+    }
+    .frame{
+        background-color:#e8e2d9;
+        border:3px solid #4a625f;
+        margin-top:2rem;
+        text-align: left;
+        /* width: 80vw; */
+    }
+    .frame p{
+        margin-bottom: 1rem;
+    }
+.cream{color:#e8e2d9;}
+    
 }
-.buyme img{
-    align-self: flex-end;
-}
-.saveMe{
-    grid-area:saveMe;
-    color:#e8e2d9;
-}
-
-
