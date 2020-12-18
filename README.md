@@ -12,11 +12,11 @@ Installation
 Usage
 	For use in professional portfolio. This is a ficticious business and marketing campaing. 
 Roadmap
-	IN DEVELOPMENT
+	NONE- To make functional add links, script and API. Not inteded for LIVE use.
 	
 Contributing
 	Contribution is welcome in the form of peer reviews via messeges or email to: Tamara.Gontarek@gmail.com
 License
 	None 
 Project Status 
-	In Progress 12/11/2020 
+	complete 12/18/2020 
